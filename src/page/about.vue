@@ -46,15 +46,12 @@
   }
 
   .tab-tit a {
-    display: inline-block;
-    height: 40px;
-    line-height: 40px;
+   display: inline-block;
+    line-height: 60px;
     font-size: 16px;
-    width: 23%;
-    text-align: center;
     background: #ccc;
     color: #333;
-    text-decoration: none;
+    text-decoration: underline;
     border-color: black;
     border-radius: 5px;
     margin-right: 5px;

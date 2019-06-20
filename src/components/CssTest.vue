@@ -28,7 +28,7 @@
       <colgorup span="1" class="subcolumns"></colgorup>
       <caption>这是表格标题</caption>
 
-      <tbody v-for="index in 10">
+      <tbody v-for="index in 3">
       <td style="text-align: center">aaaa</td>
       <td>bbbbb</td>
       <td>cccccc</td>

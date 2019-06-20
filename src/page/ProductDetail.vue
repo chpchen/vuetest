@@ -14,7 +14,7 @@
       <div class="fl">京A88888</div>
     </div>
     <!--拒绝列-->
-    <div class="clearfix">
+    <div >
       <span style="font-size: 20px ">已拒绝</span> <span>&nbsp;&nbsp;&nbsp;&nbsp 拒绝时间: 2019年06月16日21:03:49</span>
     </div>
 
@@ -53,8 +53,12 @@
         vue是现在很火的一个前端MVVM框架，它以数据驱动和组件化的思想构建，与angular和react并称前端三大框架。相比angular和react，vue更加轻巧、高性能、也很容易上手。大家也可以移步，看一下vue的介绍和核心功能官网介绍。简单粗暴的理解就是：用vue开发的时候，就是操作数据，然后vue就会处理，以数据驱动去改变DOM（不知道有没有理解错，理解错了指点下）。
         下面就是一个最简单的说明例子
       </p>
+      <div class="bottom1"></div>
     </div>
-    <div class="bottom"></div>
+    <div class="bottom">
+      <div class="bottom1">3333</div>
+      <div class="bottom1">dddadafaffd</div>
+    </div>
 
   </div>
 </template>
@@ -73,6 +77,9 @@
         }
       }
     },
+    created() {
+      console.log(this.$route.params.id);
+    }
   }
 </script>
 
@@ -95,6 +102,7 @@
 
   .clearfix:after {
     clear: both;
+    content: '神东系';
   }
 
   .line1 {
@@ -158,7 +166,8 @@
     padding-left: 20px;
     background-color: #dddddd;
     text-align: center;
-    display: table-cell; /*div居中*/
+    display: table-cell;
+    /*display: table-cell; !*div居中*!*/
     vertical-align: middle;
   }
 
@@ -208,5 +217,11 @@
     margin-top: 10px;
     height: 50px;
     background-color: #dddddd;
+  }
+ .bottom1{
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+    color: brown;
   }
 </style>

@@ -31,11 +31,10 @@ export default new Router({
       component: ProductList
     },
     {
-      path: '/productdetail',
+      path: '/productdetail/:id',
       name: 'productdetail',
       component: ProductDetail
-    },
-
-
-  ]
+    }
+  ],
+  // linkActiveClass: "active"
 })
