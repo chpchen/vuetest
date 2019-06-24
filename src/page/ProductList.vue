@@ -3,9 +3,9 @@
     <!--标题-->
     <h4 class="cart-title">购物清单</h4>
     <!--头部标题栏-->
-    <div class="cart-product-title clearfix">
+    <div class="cart-product-title">
       <div class="td-check fl"><span
-        class="check-span fl check-all" :class="{'check-true':isSelectAll}" @click="selectProduct(isSelectAll)"></span>全选
+        class="check-span fl" :class="{'check-true':isSelectAll}" @click="selectProduct(isSelectAll)"></span>全选
       </div>
       <div class="td-product fl">商品</div>
       <div class="td-num fl">数量</div>
@@ -30,11 +30,13 @@
       </div>
     </div>
     <!--跟单员-->
-    <div class=" cart-worder clearfix">
-      <a href="javascript:;" class="choose-worder fl"><span></span>绑定跟单员</a>
-      <div class="worker-info fl">
-      </div>
+    <!--<div class="cart-worder">-->
+    <div>
+      <p class="tttt"><a href="#" ><span style="color: white">跟订单</span> </a></p>
+      <!--</div>-->
+      <!--<p class="tttt"><a href="#">文字</a></p>-->
     </div>
+
   </div>
 </template>
 
@@ -190,10 +192,10 @@
   }
 
   .page-shopping-cart .cart-title {
-    color: #000000;
-    text-align: center;
-    padding-left: 20px;
-    line-height: 68px;
+    /*color: #000000;*/
+    /*text-align: center;*/
+    /*padding-left: 20px;*/
+    /*line-height: 28px;*/
   }
 
   .page-shopping-cart .red-text {
@@ -204,12 +206,21 @@
     display: block;
     width: 24px;
     height: 20px;
+    margin-top: 7px;
     background: url("../assets/xuanzeweixuanze.png") no-repeat 0 0;
     background-size: 100% 100%;
   }
 
   .page-shopping-cart .td-check {
     width: 70px;
+  }
+
+  .page-shopping-cart .check-span.check-true {
+    display: block;
+    width: 24px;
+    height: 20px;
+    background: url("../assets/xianshi_xuanze.png") no-repeat 0 0;
+    background-size: 100% 100%;
   }
 
   .page-shopping-cart .td-product {
@@ -380,36 +391,43 @@
   }
 
   .page-shopping-cart .cart-worder .choose-worder {
+    /*color: #fff;*/
+    /*display: inline-block;*/
+    /*background: #39e;*/
+    /*width: 140px;*/
+    /*height: 40px;*/
+    /*line-height: 40px;*/
+    /*!*border-radius: 4px;*!*/
+    /*text-align: center;*/
+    /*margin-right: 20px;*/
+  }
+
+  .nihao {
     color: #fff;
-    display: block;
+    display: inline-block;
+    /*background: #39e;*/
+    /*width: 140px;*/
+    /*height: 40px;*/
+    /*line-height: 40px;*/
+    /*border-radius: 4px;*/
+    /*text-align: left;*/
+
+    /*margin-right: 20px;*/
+  }
+
+  .tttt {
+    color: #fff;
+    display: inline-block;
     background: #39e;
     width: 140px;
     height: 40px;
     line-height: 40px;
-    border-radius: 4px;
+    padding: 5px;
+    /*display: inline-block;*/
+    /*color:#fff ;*/
     text-align: center;
-    margin-right: 20px;
+    background-color: #39e;
+    /*width: 120px*/
   }
 
-  .page-shopping-cart .cart-worder .choose-worder span {
-    display: inline-block;
-    vertical-align: top;
-    margin: 9px 10px 0 0;
-    width: 22px;
-    height: 22px;
-    background: url("../assets/shopping_cart.png") no-repeat -92px 0;
-  }
-
-  .page-shopping-cart .cart-worder .worker-info {
-    color: #666;
-  }
-
-  .page-shopping-cart .cart-worder .worker-info img {
-    border-radius: 100%;
-    margin-right: 10px;
-  }
-
-  .page-shopping-cart .cart-worder .worker-info span {
-    color: #000;
-  }
 </style>
