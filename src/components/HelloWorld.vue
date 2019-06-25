@@ -85,6 +85,9 @@
         </a>
       </li>
     </ul>
+    <ul>
+      <ol v-for="item in datas">{{item.desc}}</ol>
+    </ul>
   </div>
 </template>
 
@@ -100,19 +103,72 @@
           sex: 'man',
           age: 21
         },
-        items: []
+        items: [],
+        results:[],
+        datas:[],
+        gankIoDatas:[],
+        isShowNativeResult:false,
+        isShowGankIoResult:false
       }
     },
+    // methods: {
+      // 本地请求 json 模拟
+      // getData() {
+      //   var that = this
+      //   this.$http.get('../static/mydata.json').then(response =>{
+      //     console.log(response)
+      //     if(response.body.status == '0001'){
+      //       that.datas = response.body.datas
+      //       that.isShowNativeResult = true
+      //       that.isShowGankIoResult = false
+      //     }
+      //   },response => {
+      //     console.log('error')
+      //     that.isShowNativeResult = false
+      //     that.isShowGankIoResult = false
+      //   })
+      // },
+    // },
     created() {
       // 接口请求
-      this.$http.get("http://gank.io/api/data/福利/10/1").then(response => {
+      // this.$http.get("http://gank.io/api/data/福利/10/1").then((response) => {
+      //   // console.log(response)
+      //   // 给对象赋值
+      //   this.$set('results',response.results)
+      //
+      // }), response => {
+      //   console.log('erroe')
+      // }
+
+      var that = this
+      //本地数据请求
+      // this.$http.get('../static/mydata.json').then(response =>{
+      //   console.log(response)
+      //   if(response.body.status == '0001'){
+      //     console.log("0001")
+      //     that.datas = response.body.datas
+      //     that.isShowNativeResult = true
+      //     that.isShowGankIoResult = false
+      //   }
+      // },response => {
+      //   console.log('error')
+      //   that.isShowNativeResult = false
+      //   that.isShowGankIoResult = false
+      // })
+      //服务端接口请求
+      this.$http.get('http://gank.io/api/data/福利/10/1').then(response =>{
         console.log(response)
+          console.log(response)
+          that.datas = response.body.results
+          that.isShowNativeResult = true
+          that.isShowGankIoResult = false
+      },response => {
+        console.log('error')
+        that.isShowNativeResult = false
+        that.isShowGankIoResult = false
+      })
+    },
 
-      }), response => {
-        console.log('erroe')
-      }
-
-    }
   }
 </script>
 

@@ -11,11 +11,10 @@
           </li>
         </ul>
       </div>
-      <div id="inline">
+      <div id="inline" style="display: none">
         display:inline 在同一行，并且宽度就等于文字内容的宽度且设置宽度无用<p>内容内容内容内容内容内容内容</p>内容内容内容内容内容内容
-        <a href="javascript:;" ><span class="centera">  跳转标签</span></a>
       </div>
-      <div id="inline-block">
+      <div id="inline-block" style="display: none">
         display:inline-block 既有行级元素的特性，也有块级元素的特性，因此在同一行，能设置宽高，margin，padding<p>内容内容内容内容内容内容内容</p>内容内容内容内容内容内容
       </div>
       <div id="block" style="display:none">
@@ -79,7 +78,7 @@
   }
 
   #inline-block p {
-    display: inline-block;
+    display: none;
     background-color: red;
     width: 100px;
     padding: 10px;
