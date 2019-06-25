@@ -89,9 +89,10 @@
 </template>
 
 <script>
+
   export default {
     name: 'HelloWorld',
-    data () {
+    data() {
       return {
         msg: 'Welcome to Your Vue.js App',
         person: {
@@ -101,6 +102,16 @@
         },
         items: []
       }
+    },
+    created() {
+      // 接口请求
+      this.$http.get("http://gank.io/api/data/福利/10/1").then(response => {
+        console.log(response)
+
+      }), response => {
+        console.log('erroe')
+      }
+
     }
   }
 </script>

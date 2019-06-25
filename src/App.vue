@@ -13,6 +13,7 @@
       </div>
       <div id="inline">
         display:inline 在同一行，并且宽度就等于文字内容的宽度且设置宽度无用<p>内容内容内容内容内容内容内容</p>内容内容内容内容内容内容
+        <a href="javascript:;" ><span class="centera">  跳转标签</span></a>
       </div>
       <div id="inline-block">
         display:inline-block 既有行级元素的特性，也有块级元素的特性，因此在同一行，能设置宽高，margin，padding<p>内容内容内容内容内容内容内容</p>内容内容内容内容内容内容
@@ -90,11 +91,19 @@
     width: 100px;
     padding: 20px;
   }
-
+  .centera{
+    display: block;
+    width: 300px;
+    height: 300px;
+    line-height:300px;
+    border: 1px solid black;
+    text-align:center;
+    margin:0;
+  }
   a {
     text-decoration: none;
     text-transform: capitalize;
-    text-indent: 5em;
+    /*text-indent: 5em;*/
   }
 
   .tabs {
