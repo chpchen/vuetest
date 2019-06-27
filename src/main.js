@@ -6,6 +6,8 @@ import router from './router'
 // vueresource引入
 import VueResource from 'vue-resource'
 
+import store from './store/index'
+
 // axios引入
 import axios from 'axios'
 // 引入通用工具方法
@@ -23,6 +25,7 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
+  store,//使用store
   components: {App},
   template: '<App/>'
 })

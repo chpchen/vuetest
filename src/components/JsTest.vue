@@ -6,14 +6,19 @@
     <div v-show="indextest===1" class="fs32">1111111</div>
     <div v-show="indextest===2">22222222</div>
     <div v-show="indextest===3">33333333</div>
+    <div >{{$store.state.count}}</div>
     <div class="checknormal fs28" :class="{ checkclass: indextest===3 }">等于三时显示</div>
-    <img :src="'/path/to/images/' + fileName" alt="altText"/>
     <!--<div>button</div>-->
     <div class="button" @click="handler()">显示隐藏</div>
+    <div class="button" @click="add(3)">stroe属性测试+</div>
+    <div class="button" @click="reduce(5)">stroe属性测试-</div>
   </div>
 </template>
 
 <script>
+
+  import {mapGetters,mapState, mapMutations } from 'vuex'
+
   export default {
     name: "JsTest",
     data() {
@@ -27,9 +32,19 @@
     },
     computed: {
       //计算方法
+      // count(){
+      //   return this.$store.state.count
+      // }
+      ...mapGetters([
+        'count'
+      ])
     }, methods: {
+      ...mapMutations([
+        'add',
+        'reduce'
+      ]),
       handler: function () {
-        // console.log(this.isshow);
+        console.log(this.$store.state.count);
         // this.$util.showToast('dddd')
         this.isshow = !this.isshow;
         this.indextest = (this.indextest + 1) % 3 + 1
@@ -88,6 +103,7 @@
     }
 
     .button {
+      display: block;
       border-radius: 5px;
       background-color: darkgreen;
       width: 200px;
@@ -95,6 +111,7 @@
       text-align: center;
       line-height: 50px;
       border: 2px dotted red;
+      cursor:pointer;
     }
   }
 
