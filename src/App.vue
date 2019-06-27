@@ -36,10 +36,10 @@
           age: "44"
         },
         namelist: [
-          {text: '首页', router: 'HelloWorld'},
+          {text: '首页', router: 'jstest'},
           {text: '大厅', router: 'about'},
-          {text: '订阅', router: 'productlist'},
-          {text: '订单', router: 'productdetail'}
+          {text: '订阅', router: 'about'},
+          {text: '订单', router: 'about'}
         ]
       }
     },

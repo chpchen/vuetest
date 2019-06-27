@@ -1,0 +1,323 @@
+/*公共样式文件
+ * 外边距
+    左 ml16 ml20 ml32
+    右 mr20 mr32 mr48
+    左右 mh20 mh32
+    上 mt20 mt24 mt32
+    下 mb20 mb32
+    上下 mv20 mv32
+    上右下左 mhv20 mhv32
+ * 内边距
+    左 pl20 pl32
+    右 pr20 pr32
+    左右 ph20 ph32 ph48 ph56
+    上 pt20 pt32
+    下 pb18 pb20 pb24 pb32
+    上下 pv20 pv24 pv32
+    上右下左 phv20 phv32
+ * 白色背景 bgWhite
+ * 去除文字默认行高 lineH1
+ * 行高 lineH40 lineH44 lineH48 lineH52 lineH56
+ * 上边框/下边框 bt bb
+ * 字号 fs16 fs20 fs24 fs28 fs32 fs36 fs40 fs44 fs48 fs52 fs56
+ * 文字加粗 fb
+ * 文字颜色 cOrange1 cRed1 cRed2 cBlue1 cGreen1 cBlack c1A1A1A cBFBFBF c333 c666 c999 cCCC cWhite
+ * 文字水平居中 tc
+ * 单行文字超出显示省略号 ellipsis
+ * 多行文字超出显示省略号 ellipsisClamp2
+*/
+/*外边距*/
+// 左
+.ml16 {
+  margin-left: 16px;
+}
+.ml20 {
+  margin-left: 20px;
+}
+.ml32 {
+  margin-left: 32px;
+}
+// 右
+.mr20 {
+  margin-right: 20px;
+}
+.mr32 {
+  margin-right: 32px;
+}
+.mr48 {
+  margin-right: 48px;
+}
+// 左右
+.mh20 {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.mh32 {
+  margin-left: 32px;
+  margin-right: 32px;
+}
+// 上
+.mt20 {
+  margin-top: 20px;
+}
+.mt24 {
+  margin-top: 24px;
+}
+.mt32 {
+  margin-top: 32px;
+}
+// 下
+.mb20 {
+  margin-bottom: 20px;
+}
+.mb32 {
+  margin-bottom: 32px;
+}
+// 上下
+.mv20 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.mv32 {
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+// 上右下左
+.mhv20 {
+  margin: 20px;
+}
+.mhv32 {
+  margin: 32px;
+}
+/*内边距*/
+// 左
+.pl20 {
+  padding-left: 20px;
+}
+.pl32 {
+  padding-left: 32px;
+}
+// 右
+.pr20 {
+  padding-right: 20px;
+}
+.pr32 {
+  padding-right: 32px;
+}
+// 左右
+.ph20 {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.ph32 {
+  padding-left: 32px;
+  padding-right: 32px;
+}
+.ph48 {
+  padding-left: 48px;
+  padding-right: 48px;
+}
+.ph56 {
+  padding-left: 56px;
+  padding-right: 56px;
+}
+// 上
+.pt20 {
+  padding-top: 20px;
+}
+.pt32 {
+  padding-top: 32px;
+}
+// 下
+.pb18 {
+  padding-bottom: 18px;
+}
+.pb20 {
+  padding-bottom: 20px;
+}
+.pb24 {
+  padding-bottom: 24px;
+}
+.pb32 {
+  padding-bottom: 32px;
+}
+// 上下
+.pv20 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.pv24 {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+.pv32 {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+// 上右下左
+.phv20 {
+  padding: 20px;
+}
+.phv32 {
+  padding: 32px;
+}
+/*白色背景*/
+.bgWhite {
+  background-color: @white;
+}
+/*去除文字默认行高*/
+.lineH1 {
+  line-height: 1;
+}
+/*行高*/
+.lineH40 {
+  line-height: 40px;
+}
+.lineH44 {
+  line-height: 44px;
+}
+.lineH48 {
+  line-height: 48px;
+}
+.lineH52 {
+  line-height: 52px;
+}
+.lineH56 {
+  line-height: 56px;
+}
+/*边框*/
+.bt {
+  border-top: 0.5px solid @border1;
+}
+.bb {
+  border-bottom: 0.5px solid @border1;
+}
+/*字号*/
+.fs16 {
+  font-size: 16px;
+}
+.fs20 {
+  font-size: 20px;
+}
+.fs24 {
+  font-size: 24px;
+}
+.fs28 {
+  font-size: 28px;
+}
+.fs32 {
+  font-size: 32px;
+}
+.fs36 {
+  font-size: 36px;
+}
+.fs40 {
+  font-size: 40px;
+}
+.fs44 {
+  font-size: 44px;
+}
+.fs48 {
+  font-size: 48px;
+}
+.fs52 {
+  font-size: 52px;
+}
+.fs56 {
+  font-size: 56px;
+}
+/*文字加粗*/
+.fb {
+  font-family: PingFangSC-Semibold;
+}
+/*文字颜色*/
+.cOrange1 {
+  color: @orange1;
+}
+.cRed1 {
+  color: @red1;
+}
+.cRed2 {
+  color: @red2;
+}
+.cBlue1 {
+  color: @blue1;
+}
+.cGreen1 {
+  color: @green1;
+}
+.cBlack {
+  color: @black;
+}
+.c1A1A1A {
+  color: @1A1A1A;
+}
+.c333 {
+  color: #333333;
+}
+.c666 {
+  color: @666666;
+}
+.c999 {
+  color: @999999;
+}
+.cCCC {
+  color: @CCCCCC;
+}
+.cBFBFBF {
+  color: @BFBFBF;
+}
+.cWhite {
+  color: @white;
+}
+/*文字水平居中*/
+.tc {
+  text-align: center;
+}
+/*单行文字超出显示省略号*/
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/*多行文字超出显示省略号*/
+.ellipsisClamp2 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+// 透明渐变动画
+.fade-enter-active,
+.fade-leave-active {
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.fade-enter,
+.fade-leave-active {
+  opacity: 0;
+}
+// 上拉菜单动画
+.pull-enter-active,
+.pull-leave-active {
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.pull-enter,
+.pull-leave-active {
+  -webkit-transform: translateY(100%);
+  -moz-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  -o-transform: translateY(100%);
+  transform: translateY(100%);
+}
+.pull {
+  transform: translateY(0)!important;
+}
