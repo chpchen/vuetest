@@ -172,44 +172,44 @@
       //   that.isShowGankIoResult = false
       // })
       // axios请求本地文件
-      // this.$axios.get('../static/mydata.json').then(response => {
-      //   console.log(response)
-      //   console.log("你好")
-      //   // 注意这里是data
-      //   if (response.data.status == '0001') {
-      //     console.log("取到数据了")
-      //     console.log("0001")
-      //     that.datas = response.data.datas
-      //     that.isShowNativeResult = true
-      //     that.isShowGankIoResult = false
-      //   } else {
-      //     console.log("状态不对")
-      //   }
-      // }).catch(error => {
-      //   console.log("出错了；；；；；")
-      //   console.log(error)
-      //
-      // }),
-      var parames = {
-        'loginname': '333'
-      }
-      //请求远程数据
-      this.$axios.create({
-        headers: {
-          token: '87788778'
-        }
-      }).get('http://gank.io/api/data/福利/10/1').then(response => {
+      this.$axios.get('../static/hotcity.json').then(response => {
         console.log(response)
+        console.log("你好")
         // 注意这里是data
-        console.log("取到数据了")
-        that.gankIoDatas = response.data.results
-        that.isShowNativeResult = true
-        that.isShowGankIoResult = false
+        if (response.data.status == '0001') {
+          console.log("取到数据了")
+          console.log("0001")
+          that.datas = response.data.datas
+          that.isShowNativeResult = true
+          that.isShowGankIoResult = false
+        } else {
+          console.log("状态不对")
+        }
       }).catch(error => {
         console.log("出错了；；；；；")
         console.log(error)
 
       })
+      // var parames = {
+      //   'loginname': '333'
+      // }
+      //请求远程数据
+      // this.$axios.create({
+      //   headers: {
+      //     token: '87788778'
+      //   }
+      // }).get('http://gank.io/api/data/福利/10/1').then(response => {
+      //   console.log(response)
+      //   // 注意这里是data
+      //   console.log("取到数据了")
+      //   that.gankIoDatas = response.data.results
+      //   that.isShowNativeResult = true
+      //   that.isShowGankIoResult = false
+      // }).catch(error => {
+      //   console.log("出错了；；；；；")
+      //   console.log(error)
+      //
+      // })
     }, methods: {
       init() {
         const userAgent = navigator.userAgent;

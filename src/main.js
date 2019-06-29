@@ -13,7 +13,7 @@ import axios from 'axios'
 // 引入通用工具方法
 import utils from './utils'
 // 引入全局css样式
-import '@/assets/style/index.less'
+import './assets/style/index.less'
 // /*使用VueResource插件*/
 Vue.use(VueResource)
 Vue.prototype.$axios = axios

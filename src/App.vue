@@ -1,8 +1,9 @@
 <template>
   <transition name=”slide-fade”>
     <div id="app">
+    <header-top  head-title="headTitle"></header-top>
+      <router-view style="padding-top: 100px"/>
 
-      <router-view/>
 
       <div class="tabs">
         <ul class="ul">
@@ -25,6 +26,7 @@
 </template>
 
 <script>
+  import headerTop from './components/Head';
   export default {
     name: 'App',
     data() {
@@ -43,8 +45,9 @@
         ]
       }
     },
-
-
+  components:{
+    headerTop
+  }
   }
 </script>
 
@@ -74,7 +77,7 @@
   #inline p {
     display: none;
     background-color: red;
-    width: 300px; /*这里设置无用*/
+    width: 100%; /*这里设置无用*/
   }
 
   #inline-block p {
@@ -92,7 +95,7 @@
   }
   .centera{
     display: block;
-    width: 300px;
+    width: 100%;
     height: 300px;
     line-height:300px;
     border: 1px solid black;
@@ -106,7 +109,7 @@
   }
 
   .tabs {
-    width: 600px;
+    width: 100%;
     background-color: #dddddd;
     margin: 0 auto;
   }

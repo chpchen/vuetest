@@ -6,11 +6,12 @@
       <a href="javascript:;" @click="changetab(2)" :class="{'cur':curId===2}">javascript</a>
       <a href="javascript:;" @click="changetab(3)" :class="{'cur':curId===3}">vue</a>
     </div>
+    <div class="button" @click="objecttest">JavaScript对象</div>
     <div class="tab-con">
       <div v-show="curId===0">html</div>
       <div v-show="curId===1">css</div>
       <div v-show="curId===2">javascript</div>
-      <div v-show="curId===3">vue</div>
+      <div v-show="curId===3">{{datestr}}</div>
     </div>
   </div>
 </template>
@@ -20,15 +21,25 @@
     data() {
       return {
         desc: '',
-        curId: 0
+        curId: 0,
       }
     },
-    computed: {},
+    computed: {
+      //时间
+      datestr :function () {
+        return Date()
+      }
+    },
     methods: {
       changetab: function (index) {
         console.log(index);
         this.curId = index;
+      },
+      objecttest:function () {
+
+
       }
+
     },
     created() {
     },
@@ -77,6 +88,15 @@
         height: 400px;
         padding-top: 20px;
       }
+    }
+
+    .button{
+      background-color: #4da6ff;
+      width: 25%;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+
     }
 
   }
