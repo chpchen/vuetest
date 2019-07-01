@@ -1,7 +1,7 @@
 <template>
   <transition name=”slide-fade”>
     <div id="app">
-    <header-top  head-title="headTitle"></header-top>
+    <header-top  :headtitle="标题内容你说那" :data="person"></header-top>
       <router-view style="padding-top: 100px"/>
 
 
@@ -39,7 +39,7 @@
         },
         namelist: [
           {text: '首页', router: 'jstest'},
-          {text: '大厅', router: 'about'},
+          {text: '大厅', router: 'productlist'},
           {text: '订阅', router: 'about'},
           {text: '订单', router: 'about'}
         ]

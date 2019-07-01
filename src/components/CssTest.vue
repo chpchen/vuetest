@@ -113,8 +113,7 @@
       //将获取的数据按照A-Z字母开头排序
       sortgroupcity(){
         let sortobj = {};
-         console.log(typeof  this.groupcity);
-        for (let i = 65; i <= 90; i++) {
+        for (let i = 65; i <= 66; i++) {
            // console.log(String.fromCharCode(i));
             // console.log(this.groupcity);
           if (this.groupcity[String.fromCharCode(i)]) {
@@ -123,7 +122,6 @@
           }
         }
          console.log('排序了');
-         console.log(JSON.stringify(sortobj));
          //取对象前十个
         return sortobj
       }

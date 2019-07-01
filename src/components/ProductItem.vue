@@ -15,7 +15,7 @@
     <div class="item-num fl">
       <div class="product-num">
         <a href="javascript:;" class="num-reduce num-do fl"
-           @click.stop="produce.pro_num>0?produce.pro_num--:0"><span></span></a>
+           @click.stop="produce.pro_num>0?produce.pro_num--:null"><span></span></a>
         <input type="text" class="num-input" v-model="produce.pro_num">
         <a href="javascript:;" class="num-add num-do fr" @click="produce.pro_num++"><span></span></a>
       </div>

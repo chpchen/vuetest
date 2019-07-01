@@ -13,29 +13,51 @@
       <div v-show="curId===2">javascript</div>
       <div v-show="curId===3">{{datestr}}</div>
     </div>
+    <div>
+      <prop-test :data="person"></prop-test>
+    </div>
   </div>
 </template>
 <script>
+  import PropTest from '../components/PropTest';
+
   export default {
+    components: {
+      PropTest
+    },
     name: '',
     data() {
       return {
         desc: '',
         curId: 0,
+        datastr: '',
+        person:{
+          name:'张三张三张三张三张三',
+          age:20
+        }
       }
     },
     computed: {
       //时间
       datestr :function () {
         return Date()
-      }
+      },
+      // ttt: {
+      //   getter: function () {
+      //     return Date
+      //   },
+      //   setter: function (v) {
+      //     datastr = v
+      //   }
+      // }
     },
     methods: {
       changetab: function (index) {
         console.log(index);
         this.curId = index;
+        JSON.parse()
       },
-      objecttest:function () {
+      objecttest: function () {
 
 
       }
@@ -90,7 +112,7 @@
       }
     }
 
-    .button{
+    .button {
       background-color: #4da6ff;
       width: 25%;
       height: 50px;
